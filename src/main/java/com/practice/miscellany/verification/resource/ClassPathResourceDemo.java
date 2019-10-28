@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class ClassPathResourceDemo {
     public static void main(String[] args) throws IOException {
-        ClassPathResource classPathResource = new ClassPathResource("application.yml");
+        ClassPathResource classPathResource = new ClassPathResource("application.yaml");
         String path = classPathResource.getPath();
         URL url = classPathResource.getURL();
         String path1 = url.getPath();
@@ -16,5 +16,11 @@ public class ClassPathResourceDemo {
 
         String absolutePath = classPathResource.getFile().getAbsolutePath();
         System.out.println("absolutePath = " + absolutePath);
+
+        /*
+path = application.yaml
+path1 = /D:/Practice/miscellany-verification/target/classes/application.yaml
+absolutePath = D:\Practice\miscellany-verification\target\classes\application.yaml
+        * */
     }
 }
